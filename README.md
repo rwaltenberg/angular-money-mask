@@ -3,6 +3,15 @@ An AngularJS (1.x) directive to mask inputs with currency values
 
 ## Usage
 
+#### Download from npm or bower
+```sh
+$ npm install angular-money-directive --save
+```
+or
+```sh
+$ bower install angular-money-directive --save
+```
+
 #### Reference script file
 
 ```html
