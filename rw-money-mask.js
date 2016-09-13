@@ -45,7 +45,7 @@
         ngModelCtrl.$render();
       });
 
-      element.on('keydown', function (e) {
+      element.on('keypress', function (e) {
         var char = String.fromCharCode(e.keyCode);
         e.preventDefault();
         
