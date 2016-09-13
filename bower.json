@@ -1,0 +1,17 @@
+{
+  "name": "angular-money-mask",
+  "homepage": "https://github.com/rwaltenberg/angular-money-mask",
+  "authors": [
+    "Rodrigo Waltenberg <rwaltenberg@gmail.com>"
+  ],
+  "description": "Angular directive to mask inputs with currency values",
+  "main": "rw-money-mask.js",
+  "keywords": [
+    "angular",
+    "mask",
+    "input",
+    "money",
+    "currency"
+  ],
+  "license": "GPL-3.0"
+}
