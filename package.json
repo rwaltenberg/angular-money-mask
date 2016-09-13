@@ -1,6 +1,6 @@
 {
   "name": "angular-money-mask",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Angular directive to mask inputs with currency values",
   "main": "rw-money-mask.js",
   "repository": {
