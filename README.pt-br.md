@@ -1,7 +1,9 @@
-# Angular Money Mask
+# Máscara de Dinheiro para Angular
 Uma diretiva em AngularJS (1.x) para criar máscaras de valores monetários em campos de formulários
 
-## Uso
+** __For `English`, [click here](README.md)__ **
+
+## Como usar
 
 #### Baixe pelo npm ou bower
 ```sh

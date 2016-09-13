@@ -1,6 +1,8 @@
 # Angular Money Mask
 An AngularJS (1.x) directive to mask inputs with currency values
 
+** __Para ler este documento em `Português`, [clique aqui](README.pt-br.md)__ **
+
 ## Usage
 
 #### Download from npm or bower
