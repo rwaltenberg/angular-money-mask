@@ -13,5 +13,9 @@
     "money",
     "currency"
   ],
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "angular": "^1.5"
+  }
 }
