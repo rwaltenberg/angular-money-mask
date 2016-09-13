@@ -37,7 +37,7 @@
       scope.$watch('model', function onModelChange(newValue) {
         newValue = parseFloat(newValue) || 0;
 
-        if(newValue !== cents) {
+        if (newValue !== cents) {
           cents = Math.round(newValue * 100);
         }
 
@@ -45,15 +45,23 @@
         ngModelCtrl.$render();
       });
 
+      element.on('keydown', function (e) {
+        if (e.keyCode === 8) {
+          cents = parseInt(cents.toString().slice(0, -1)) || 0;
+
+          ngModelCtrl.$setViewValue(cents / 100);
+          ngModelCtrl.$render();
+          scope.$apply();
+          e.preventDefault();
+        }
+      });
+
       element.on('keypress', function (e) {
         var char = String.fromCharCode(e.keyCode);
         e.preventDefault();
-        
+
         if (char.search(/[0-9\-]/) === 0) {
           cents = parseInt(cents + char);
-        }
-        else if (e.keyCode === 8) {
-          cents = parseInt(cents.toString().slice(0, -1)) || 0;
         }
         else {
           return false;
