@@ -5,8 +5,8 @@
     .module('rw.moneymask', [])
     .directive('moneyMask', moneyMask);
 
-  moneyMask.$inject = ['$filter'];
-  function moneyMask($filter) {
+  moneyMask.$inject = ['$filter', '$window'];
+  function moneyMask($filter, $window) {
     var directive = {
       require: 'ngModel',
       link: link,
@@ -67,7 +67,12 @@
           return false;
         }
 
-        ngModelCtrl.$setViewValue(cents / 100);
+        if($window.getSelection().type === "Range") {
+          ngModelCtrl.$setViewValue(char / 100);
+        }
+        else {
+          ngModelCtrl.$setViewValue(cents / 100);
+        }
         ngModelCtrl.$render();
         scope.$apply();
       })
