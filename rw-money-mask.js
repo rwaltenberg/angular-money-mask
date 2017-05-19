@@ -67,8 +67,8 @@
           return false;
         }
 
-        if($window.getSelection().type === "Range") {
-          ngModelCtrl.$setViewValue(char / 100);
+        if(e.srcElement.selectionEnd != e.srcElement.selectionStart) {
+          ngModelCtrl.$setViewValue(parseInt(char) / 100);
         }
         else {
           ngModelCtrl.$setViewValue(cents / 100);
