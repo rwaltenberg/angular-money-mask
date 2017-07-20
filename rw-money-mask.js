@@ -46,7 +46,7 @@
       });
 
       element.on('keydown', function (e) {
-        if (e.keyCode === 8) {
+        if ((e.which || e.keyCode) === 8) {
           cents = parseInt(cents.toString().slice(0, -1)) || 0;
 
           ngModelCtrl.$setViewValue(cents / 100);
@@ -57,7 +57,13 @@
       });
 
       element.on('keypress', function (e) {
-        var char = String.fromCharCode(e.keyCode);
+        var key = e.which || e.keyCode;
+        
+        if(key === 9) {
+          return true;
+        }
+        
+        var char = String.fromCharCode(key);
         e.preventDefault();
 
         if (char.search(/[0-9\-]/) === 0) {
