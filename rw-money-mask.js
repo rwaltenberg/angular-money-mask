@@ -59,7 +59,7 @@
       element.on('keypress', function (e) {
         var key = e.which || e.keyCode;
         
-        if(key === 9) {
+        if(key === 9 || key === 13) {
           return true;
         }
         
@@ -72,8 +72,10 @@
         else {
           return false;
         }
+        
+        var target = e.target || e.srcElement;
 
-        if(e.srcElement.selectionEnd != e.srcElement.selectionStart) {
+        if(target.selectionEnd != target.selectionStart) {
           ngModelCtrl.$setViewValue(parseInt(char) / 100);
         }
         else {
