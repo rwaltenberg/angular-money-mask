@@ -7,11 +7,11 @@ Uma diretiva em AngularJS (1.x) para criar máscaras de valores monetários em c
 
 #### Baixe pelo npm ou bower
 ```sh
-$ npm install angular-money-directive --save
+$ npm install angular-money-mask --save
 ```
 ou
 ```sh
-$ bower install angular-money-directive --save
+$ bower install angular-money-mask --save
 ```
 
 #### Referencie o aquivo do script
